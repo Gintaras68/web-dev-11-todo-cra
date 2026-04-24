@@ -1,11 +1,39 @@
 import style from './Main.module.css';
+import user1 from '../../img/users/user-1.jpg';
+import user2 from '../../img/users/user-2.jpg';
+import user3 from '../../img/users/user-3.jpg';
+import { BsPlusCircleDotted } from 'react-icons/bs';
+import Column from './Column';
 
 function Main() {
   return (
     <main className={style.main}>
-      Pagrindinis turinys
+      <div className={style.headerLine}>
+        <h1>HomepageDesign</h1>
+        <div className={style.usersBlock}>
+          <ul className={style.usersList}>
+            <li>
+              <img className={style.avatar} src={user1} alt="Avatar" />
+            </li>
+            <li>
+              <img className={style.avatar} src={user2} alt="Avatar" />
+            </li>
+            <li>
+              <img className={style.avatar} src={user3} alt="Avatar" />
+            </li>
+          </ul>
+          <button type="button" className={style.addUserBtn}>
+            <BsPlusCircleDotted />
+          </button>
+        </div>
+      </div>
+
+      <Column title="Task Ready" tasks={[7, 8, 9]} />
+      <Column title="On Progress" tasks={[4, 5, 6]} />
+      <Column title="Needs Review" tasks={[2]} />
+      <Column title="Done" tasks={[1, 2]} />
     </main>
-  )
+  );
 }
 
-export default Main
+export default Main;
