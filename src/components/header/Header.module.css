@@ -42,11 +42,24 @@
 }
 
 .notes {
-  font-size: 1.2rem;
+  position: relative;
+  font-size: 1.3rem;
   color: #aaa;
   background-color: transparent;
   border: none;
   padding: 0;
   width: 20px;
   cursor: pointer;
+}
+
+.notesNew::after {
+      position: absolute;
+    right: -0.2rem;
+    top: -0.2rem;
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    border: 0.1rem solid white;
+    border-radius: 50%;
 }

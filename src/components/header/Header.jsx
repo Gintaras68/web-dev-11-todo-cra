@@ -21,7 +21,7 @@ function Header() {
       </nav>
 
       <div className={style.rightSide}>
-        <button className={style.notes}>
+        <button className={`${style.notes} ${style.notesNew}`}>
           <FaBell />
         </button>
       </div>
