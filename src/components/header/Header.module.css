@@ -42,6 +42,8 @@
 }
 
 .notes {
+  font-size: 1.2rem;
+  color: #aaa;
   background-color: transparent;
   border: none;
   padding: 0;

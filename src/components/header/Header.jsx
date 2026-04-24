@@ -1,5 +1,5 @@
 import logoImg from '../../img/logo.png';
-import bellImg from '../../img/bell-fill-svgrepo-com.svg';
+import { FaBell } from "react-icons/fa";
 import style from './Header.module.css';
 
 function Header() {
@@ -22,7 +22,7 @@ function Header() {
 
       <div className={style.rightSide}>
         <button className={style.notes}>
-          <img src={bellImg} alt='Your notes'/>
+          <FaBell />
         </button>
       </div>
     </header>
