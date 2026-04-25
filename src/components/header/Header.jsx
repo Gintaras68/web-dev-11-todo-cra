@@ -3,7 +3,6 @@ import { FaBell } from "react-icons/fa";
 import style from './Header.module.css';
 
 function Header() {
-  console.log(style);
 
   return (
     <header className={style.header}>

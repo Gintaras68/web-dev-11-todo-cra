@@ -12,7 +12,7 @@ function Column({ title, tasks }) {
       </div>
 
       <ul className={style.tasksList}>
-        { tasks.map(task => <li><div className={style.taskCard}>TASK {task}</div></li>) }
+        { tasks.map(task => <li key={task.id}><div className={style.taskCard}>TASK {task.id}</div></li>) }
       </ul>
 
       <button className={style.addCardBtn} type="button">+ Add Card</button>
