@@ -5,8 +5,7 @@ import user3 from '../../img/users/user-3.jpg';
 import { BsPlusCircleDotted } from 'react-icons/bs';
 import Column from './Column';
 
-function Main({data, users}) {
-  
+function Main({ tasksData, usersData }) {
   return (
     <main className={style.main}>
       <div className={style.headerLine}>
@@ -29,10 +28,26 @@ function Main({data, users}) {
         </div>
       </div>
 
-      <Column title="Task Ready" tasks={data.filter(item => item.stage === 'ready')} />
-      <Column title="On Progress" tasks={data.filter(item => item.stage === 'progress')} />
-      <Column title="Needs Review" tasks={data.filter(item => item.stage === 'review')} />
-      <Column title="Done" tasks={data.filter(item => item.stage === 'done')} />
+      <Column
+        title="Task Ready"
+        tasks={tasksData.filter((item) => item.stage === 'ready')}
+        users={usersData}
+      />
+      <Column
+        title="On Progress"
+        tasks={tasksData.filter((item) => item.stage === 'progress')}
+        users={usersData}
+      />
+      <Column
+        title="Needs Review"
+        tasks={tasksData.filter((item) => item.stage === 'review')}
+        users={usersData}
+      />
+      <Column
+        title="Done"
+        tasks={tasksData.filter((item) => item.stage === 'done')}
+        users={usersData}
+      />
     </main>
   );
 }

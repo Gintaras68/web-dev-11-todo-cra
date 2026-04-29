@@ -4,8 +4,8 @@ import { BsFlagFill, BsThreeDots } from 'react-icons/bs';
 import { BiSolidMessage } from 'react-icons/bi';
 import { RiAttachment2 } from 'react-icons/ri';
 
-function TaskCard({ data }) {
-  const { tag, task, createdAt, userID } = data;
+function TaskCard({ data, user }) {
+  const { tag, task, createdAt} = data;
 
   // chose color class for category
   let tagClass = '';
@@ -23,6 +23,8 @@ function TaskCard({ data }) {
     month: 'short', 
     day: 'numeric'
   });
+
+  let userPhoto = user ? user.photo : 'noUser';
   
 
   return (
@@ -51,7 +53,7 @@ function TaskCard({ data }) {
             </div>
           </div>
 
-          <img className={style.avatar} src={userPhoto} alt="Avatar" />
+          <img className={style.avatar} src={`./img/users/${userPhoto}.jpg`} alt="Avatar" />
         </footer>
       </article>
     </li>
