@@ -12,15 +12,17 @@ function Main({ tasksData, usersData }) {
         <h1>HomepageDesign</h1>
         <div className={style.usersBlock}>
           <ul className={style.usersList}>
-            <li>
-              <img className={style.avatar} src={user1} alt="Avatar" />
-            </li>
-            <li>
-              <img className={style.avatar} src={user2} alt="Avatar" />
-            </li>
-            <li>
-              <img className={style.avatar} src={user3} alt="Avatar" />
-            </li>
+            {usersData.map((user) => {
+              return (
+                <li>
+                  <img
+                    className={style.avatar}
+                    src={`./img/users/${user.photo}.jpg`}
+                    alt="Avatar"
+                  />
+                </li>
+              );
+            })}
           </ul>
           <button type="button" className={style.addUserBtn}>
             <BsPlusCircleDotted />
