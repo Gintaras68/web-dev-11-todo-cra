@@ -25,12 +25,20 @@
   gap: 0.6rem;
 }
 
-.addCardBtn {
-  align-self: center;
+.addTask {
+  text-align: center;
   color: #aaa;
-  font-size: 1rem;
-  padding: 0.5rem;
-  cursor: pointer;
-  background: transparent;
-  border: none;
+  font-weight: 500;
+
+  button {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #aaa;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #666;
+  }
 }
